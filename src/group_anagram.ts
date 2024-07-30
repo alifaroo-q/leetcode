@@ -14,4 +14,6 @@ function groupAnagrams(strs: string[]): string[][] {
   return Array.from(mp.values());
 }
 
-groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
+const result = groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
+
+console.log(result)

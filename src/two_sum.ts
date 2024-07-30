@@ -1,9 +1,10 @@
 export function twoSum(nums: number[], target: number): number[] {
+  const map = new Map();
+
   for (let i = 0; i < nums.length; i++) {
-    const current = nums[i];
-    for (let j = i + 1; j < nums.length; j++) {
-      if (current + nums[j] === target) return [i, j];
-    }
+    const diff = target - nums[i];
+    if (map.has(diff)) return [map.get(diff), i];
+    map.set(nums[i], i);
   }
 
   return [];
